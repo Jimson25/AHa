@@ -1,7 +1,6 @@
 package demo._0101;
 
 import java.io.File;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class RenameFile {
@@ -30,7 +29,7 @@ public class RenameFile {
     }
 
     /**
-     * 将文件重命名在原路径
+     * 将文件重命名在原路径（01.aaa.mp3删除‘01.’）
      *
      * @param path
      */
