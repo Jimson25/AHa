@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * 冒泡排序
  */
-public class Main {
+public class Main01 {
     public static void main(String[] args) {
         int[] arr = new int[10];
         int n = 0;
