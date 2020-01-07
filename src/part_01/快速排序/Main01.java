@@ -1,6 +1,7 @@
 package part_01.快速排序;
 
-import part_01.Common.Utils;
+
+import common.Utils;
 
 import java.util.Arrays;
 
