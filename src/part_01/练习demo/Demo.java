@@ -15,18 +15,21 @@ import java.util.Random;
  */
 public class Demo {
     public static void main(String[] args) {
+        //定义一个变量表示要购买的书的最大ISBN号
+        int MAX_ISBN = 100000;
+        //开始时间
         long start = System.currentTimeMillis();
         //随机生成一个70-100之间的随机数作为参与调查的同学数
         int k = new Random().nextInt(30) + 70;
         //生成一个长度为k的int数组表示参与调查的同学给定的ISBN号
-        int[] ISBNs = Utils.createIntArray(k, 0, 1000);
+        int[] ISBNs = Utils.createIntArray(k, 0, MAX_ISBN);
 
-        int[] distinctISBN = bucketSort(ISBNs, 1000);
+        int[] distinctISBN = bucketSort(ISBNs, MAX_ISBN);
         Long time = System.currentTimeMillis() - start;
-        System.out.printf("耗时：%d ms\n",time);
-        System.out.printf("共有 %d 位同学参与调查\n",k);
-        System.out.printf("需要买 %d 本书\n",distinctISBN.length);
-        System.out.printf("ISBN号分别为： %s\n",Arrays.toString(distinctISBN));
+        System.out.printf("耗时：%d ms\n", time);
+        System.out.printf("共有 %d 位同学参与调查\n", k);
+        System.out.printf("需要买 %d 本书\n", distinctISBN.length);
+        System.out.printf("ISBN号分别为： %s\n", Arrays.toString(distinctISBN));
 
     }
 
@@ -46,8 +49,8 @@ public class Demo {
         }
         //定义一个最终的数组，将桶中的每个不为0的元素对应的下标保存到该数组中
         int[] finalArr = new int[count];
-        for (int i = 0,j=0; i < bucket.length; i++) {
-            if (bucket[i]==1){
+        for (int i = 0, j = 0; i < bucket.length; i++) {
+            if (bucket[i] == 1) {
                 finalArr[j] = i;
                 j++;
             }
