@@ -1,5 +1,7 @@
 package part_02.队列;
 
+import common.Utils;
+
 import java.util.Arrays;
 
 /**
@@ -14,30 +16,14 @@ import java.util.Arrays;
 public class Main01 {
     public static void main(String[] args) {
         int QQ = 631758924;
-        //定义一个数组用于保存QQ的每个数字
-        int[] qq = new int[50];
-        int j = 0, i = 10;
-
-        //取出QQ的每个数字放到数组中，此时数组中的元素是倒序的
-        do {
-            qq[j] = QQ % i;
-            QQ /= i;
-            j++;
-        } while (QQ != 0);
-
-        //定义一个新数组用于保存最终的qq转化的数组
-        int[] a = new int[50];
-        //将原先的倒序qq数组转换为正序
-        for (int x = j - 1, y = 0; x >= 0; x--, y++) {
-            a[y] = qq[x];
-        }
+        int[] a = Utils.intToArray(QQ, 50);
 
         //定义两个变量，一个指向数组a的第一个元素，一个指向数组的最后一个元素下标-1的元素
         int head = 0;
-        int tail = j;
+        int tail = 9;
 
         //定义最终的数组
-        int[] arr = new int[j];
+        int[] arr = new int[9];
 
         int m = 0;
         while (head < tail) {
