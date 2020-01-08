@@ -1,4 +1,4 @@
-package part_01.练习demo;
+package part_01.课后练习;
 
 import common.Utils;
 
