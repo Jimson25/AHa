@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class Main01 {
     public static void main(String[] args) {
         int QQ = 631758924;
-        int[] a = Utils.intToArray(QQ, 50);
+        int[] a = Utils.intToArray(QQ);
 
         //定义两个变量，一个指向数组a的第一个元素，一个指向数组的最后一个元素下标-1的元素
         int head = 0;

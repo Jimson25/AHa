@@ -27,10 +27,10 @@ public class Utils {
     /**
      * 将一个int类型的整数转换为int数组，传入123返回{1,2,3}
      * @param number 要转换的数
-     * @param len    要转换的数的位数
      * @return       转换后的数组
      */
-    public static int[] intToArray(int number, int len) {
+    public static int[] intToArray(int number) {
+        int len = String.valueOf(number).length();
         //定义一个数组用于保存number的每个数字
         int[] arr = new int[len];
         int j = 0, i = 10;
